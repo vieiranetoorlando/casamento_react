@@ -1,12 +1,10 @@
 import React from 'react';
 
-function Home() {
-  return (
-    <div>
-      <h2>Bem-vindo ao nosso site de casamento!</h2>
-      <p>Estamos muito felizes em compartilhar esse momento especial com você.</p>
-    </div>
-  );
-}
+const Home = () => (
+<div>
+<h1>Bem-vindos ao nosso casamento!</h1>
+<p>Estamos muito felizes em compartilhar este momento com vocês.</p>
+</div>
+);
 
 export default Home;
