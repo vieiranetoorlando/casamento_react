@@ -9,4 +9,3 @@ const Presentes = () => (
 );
 
 export default Presentes;
-Perw
