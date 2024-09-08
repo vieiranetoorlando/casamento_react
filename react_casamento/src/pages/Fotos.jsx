@@ -2,20 +2,31 @@ import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
+import foto1 from '../assets/images/foto1.jpg';
+import foto1Thumb from '../assets/images/foto1-thumb.jpg';
+import foto2 from '../assets/images/foto2.jpg';
+import foto2Thumb from '../assets/images/foto2-thumb.jpg';
+import foto3 from '../assets/images/foto3.jpg';
+import foto3Thumb from '../assets/images/foto3-thumb.jpg';
+
 const images = [
 {
-original: 'url-da-sua-foto-1.jpg',
-thumbnail: 'url-da-sua-foto-1-thumb.jpg',
+original: foto1,
+thumbnail: foto1Thumb,
 },
 {
-original: 'url-da-sua-foto-2.jpg',
-thumbnail: 'url-da-sua-foto-2-thumb.jpg',
+original: foto2,
+thumbnail: foto2Thumb,
+},
+{
+original: foto3,
+thumbnail: foto3Thumb,
 },
 // Adicione mais fotos aqui
 ];
 
 const Fotos = () => (
-<div>
+<div className="gallery-container">
 <h1>Nossas Fotos</h1>
 <ImageGallery items={images} />
 </div>
