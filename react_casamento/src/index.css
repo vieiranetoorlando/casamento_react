@@ -1,233 +1,133 @@
-:root {
-    --primary-color: hsl(350, 3%, 39%); /* Rosa Claro */
-    --secondary-color: #dbad2e; /* Cinza Claro */
-    --background-color: #4b4949; /* Branco */
-    --text-color: #333;
-    --text-light-color: #2c2b2c; /* Verde Claro */
-    }
-    
-    body {
-    font-family: 'Roboto', sans-serif;
+/* Estilos globais */
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    background-color: var(--background-color);
-    }
-    
-    h1 {
-    font-family: 'Lobster', cursive;
-    color: var(--text-color);
-    text-align: center;
-    margin-top: 20px;
-    }
-    
-    p {
-    color: var(--text-light-color);
-    text-align: center;
-    }
-    
-    div {
-    padding: 20px;
-    }
-    
-    .navbar {
+}
+
+/* Estilos de fundo */
+:root {
+    --primary-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    --secondary-color: transparent;
+    --background-color: #94c7a6;
+    --text-color: #494647;
+    --text-light-color: #134925;
+}
+
+/* Ajustes para a navbar */
+.navbar {
     background-color: var(--primary-color);
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav-list {
+}
+
+.nav-list {
     list-style: none;
     display: flex;
     justify-content: center;
     padding: 0;
-    }
-    
-    .nav-list li {
+}
+
+.nav-list li {
     margin: 0 15px;
-    }
-    
-    .nav-list a {
-    color: rgb(214, 187, 34);
+}
+
+.nav-list a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, text-decoration 0.3s;
-    }
-    
-    .nav-list a:hover {
+}
+
+.nav-list a:hover {
     text-decoration: underline;
-    color: #FF69B4; /* Rosa mais escuro */
+    color: #84c993;
+}
+
+/* Estilos para o fundo em telas maiores */
+body {
+    background-image: url('./assets/images/background.jpg');
+    background-size: cover; /* Mantém o cover para desktops */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Media Queries para responsividade */
+
+/* Ajustes em tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
     }
-    
-    .carousel-image {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 400px; /* Ajuste o tamanho máximo */
-    display: block;
-    margin: 0 auto;
+
+    /* Ajuste para evitar cortes e preencher a largura da tela */
+    body {
+        background-size: cover; /* Mantém o cover para tablets */
+        background-position: center center; /* Centraliza */
     }
-    
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
     .gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
     }
-    
-    .image-gallery-slide img {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+}
+
+/* Ajustes em dispositivos móveis (largura máxima de 480px) */
+@media (max-width: 480px) {
+    /* Ajustes gerais */
+    h1 {
+        font-size: 1.5em;
     }
-    
-    .image-gallery-slide img:hover {
-    transform: scale(1.05);
+
+    p {
+        font-size: 1em;
+        padding: 0 10px;
     }
-    
-    .presentes-container {
-    text-align: center;
-    margin-top: 20px;
+
+    /* Ajustes para garantir que o fundo cubra toda a tela no mobile */
+    body {
+        background-image: url('./assets/images/background_mobile.jpg');
+        background-size: cover; /* Faz a imagem cobrir toda a área visível */
+        background-position: top center; /* Ajusta a posição para o topo centralizado */
+        background-repeat: no-repeat;
+        background-attachment: scroll; /* Remove o efeito de fixação */
     }
-    
-    .presentes-container p {
-    font-size: 1.2em;
-    color: var(--text-color);
+
+    /* Redução do espaçamento e margens */
+    .navbar {
+        padding: 8px;
+        margin: 5px;
     }
-    
-    .presentes-container strong {
-    font-size: 1.5em;
-    color: var(--text-color);
+
+    .nav-list {
+        flex-direction: column; /* Menu em coluna no mobile */
+        align-items: center;
     }
-    
-    .confirmacao-container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+
+    .nav-list li {
+        margin: 8px 0;
     }
-    
-    .confirmacao-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    .gallery-container {
+        padding: 10px;
     }
-    
-    .confirmacao-container form div {
-    margin-bottom: 15px;
-    }
-    
-    .confirmacao-container form label {
-    margin-right: 10px;
-    }
-    
-    .confirmacao-container form input {
-    padding: 5px;
-    font-size: 1em;
-    }
-    
-    .confirmacao-container form button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    }
-    
-    .confirmacao-container form button:hover {
-    background-color: #FF69B4; /* Rosa mais escuro */
-    transform: scale(1.05);
-    }
-    
-    .informacoes-container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    }
-    
-    .informacoes-container p {
-    font-size: 1.2em;
-    color: var(--text-color);
-    }
-    
-    .informacoes-container strong {
-    font-size: 1.5em;
-    color: var(--text-color);
-    }
-    
-    .map-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    }
-    
+
     .footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    width: calc(100% - 20px); /* Ajuste a largura para evitar que se estenda além da tela */
-    bottom: 0;
-    left: 10px; /* Centraliza o rodapé horizontalmente */
-    border-top: 2px solid var(--secondary-color);
-    border-radius: 20px 20px 0 0; /* Bordas arredondadas no topo */
+        padding: 10px;
+        font-size: 0.9em;
     }
-    
-    .footer p {
-    margin: 0;
-    font-size: 1em;
-    }
-    
-    .footer a {
-    color: white;
-    text-decoration: none;
-    }
-    
-    .footer a:hover {
-    text-decoration: underline;
-    }
-    
-    .social-list {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
-    }
-    
-    .social-list li {
-    margin: 0 10px;
-    }
-    
-    .social-list a {
-    display: flex;
-    align-items: center;
-    }
-    
-    .social-list a svg {
-    margin-right: 5px;
-    }
-    
-    /* Media Queries */
-    @media (max-width: 768px) {
-    .carousel-image, .gallery-container .image-gallery-slide img {
-    max-width: 90%;
-    }
-    }
-    
-    @media (max-width: 480px) {
-    .carousel-image, .gallery-container .image-gallery-slide img {
-    max-width: 100%;
-    }
-    }
-    
+}
