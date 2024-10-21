@@ -14,7 +14,7 @@ const Home = () => (
     <h1></h1>
     <h1></h1>
     <h1>"Como nos grandes romances do cinema, março trará nosso final feliz. Prepare-se para viver esse momento inesquecível ao nosso lado."</h1>
-    <p>".................."</p>
+
     <ImageGallery items={images} />
   </div>
 );

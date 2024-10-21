@@ -10,11 +10,25 @@ body, html {
 
 /* Estilos de fundo */
 :root {
-    --primary-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    --primary-color: transparent;; /* Fundo semitransparente */
     --secondary-color: transparent;
     --background-color: #94c7a6;
-    --text-color: #494647;
-    --text-light-color: #134925;
+    --text-color: #e0dcdd;
+    --text-light-color: #4d4e4e;
+}
+
+.gallery-container h1 {
+    font-size: 2em; /* Tamanho da fonte do título */
+    color: var(--text-light-color); /* Usando a cor definida na root */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margens acima e abaixo do título */
+}
+
+.gallery-container p {
+    font-size: 1.2em; /* Tamanho da fonte do parágrafo */
+    color: var(--text-color); /* Usando a cor definida na root */
+    text-align: center; /* Centraliza o texto */
+    margin: 10px 0; /* Margens acima e abaixo do parágrafo */
 }
 
 /* Ajustes para a navbar */
@@ -38,7 +52,7 @@ body, html {
 }
 
 .nav-list a {
-    color: white;
+    color: rgb(79, 172, 121);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, text-decoration 0.3s;
