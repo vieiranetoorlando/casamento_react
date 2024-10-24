@@ -22,7 +22,14 @@ import qrCode800 from '../assets/images/presentes/800.png';
 
 const presentes = [
   { id: 1, nome: 'Dia da Noiva', imagem: dianoiva, descricao: 'Dia da noiva ficar uma belezura R$ 800,00', qrCode: qrCode175 },
-  { id: 2, nome: 'Porção Mágica', imagem: pocaomagica, descricao: 'Porção mágica para noivo R$ 138,00', qrCode: qrCode138, transferCode: '00020126360014br.gov.bcb.pix0114+55159973550425204000053039865406138.005802BR5925JUCELIA MENDES DOS SANTOS6008SOROCABA62580520SAN2024102402332540150300017br.gov.bcb.brcode01051.0.063048047' },
+  { 
+    id: 2, 
+    nome: 'Porção Mágica', 
+    imagem: pocaomagica, 
+    descricao: 'Porção mágica para noivo R$ 138,00', 
+    qrCode: qrCode138, 
+    transferCode: '00020126360014br.gov.bcb.pix0114+55159973550425204000053039865406138.005802BR5925JUCELIA MENDES DOS SANTOS6008SOROCABA62580520SAN2024102402332540150300017br.gov.bcb.brcode01051.0.063048047' 
+  },
   { id: 3, nome: 'Livro de Receitas', imagem: receita, descricao: 'Livro de receitas para o noivo não engasgar a noiva R$ 58,00', qrCode: qrCode58 },
   { id: 4, nome: 'Controle Pause', imagem: controle, descricao: 'Controle com pause para noiva parar de cantar no karaokê R$ 119,00', qrCode: qrCode119 },
   { id: 5, nome: 'Livro do Noivo', imagem: livro, descricao: 'Livro para o noivo aprender a sempre estar certo como a noiva. R$ 175,00', qrCode: qrCode175 },
@@ -40,7 +47,7 @@ const Presentes = () => {
 
   const handlePresentear = (qrCode, code) => {
     setSelectedQrCode(qrCode);
-    setTransferCode(code);
+    setTransferCode(code || "Código de transferência não disponível."); // Define uma mensagem padrão caso o código não exista
     setModalOpen(true);
   };
 
@@ -74,7 +81,7 @@ const Presentes = () => {
                 border: 'none',
                 cursor: 'pointer',
               }}
-              onClick={() => handlePresentear(presente.qrCode, presente.transferCode || presente.qrCode)}
+              onClick={() => handlePresentear(presente.qrCode, presente.transferCode)}
             >
               Presentear
             </button>
@@ -86,7 +93,9 @@ const Presentes = () => {
         <div className="modal" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.8)', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={closeModal}>
           <div className="modal-content" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '5px', position: 'relative', maxWidth: '600px' }} onClick={(e) => e.stopPropagation()}>
             <img src={selectedQrCode} alt="QR Code" style={{ width: '200px', height: 'auto', display: 'block', margin: '0 auto' }} />
-            <p style={{ textAlign: 'center', marginBottom: '20px', fontSize: '10px' }}>{transferCode}</p> {/* Tamanho da fonte reduzido */}
+            <p style={{ textAlign: 'center', marginBottom: '20px', fontSize: '8px' }}>
+              {transferCode}
+            </p>
             <button onClick={copyToClipboard} style={{ display: 'block', margin: '0 auto', padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', cursor: 'pointer' }}>
               Copiar Código
             </button>
