@@ -10,7 +10,7 @@ body, html {
 
 /* Estilos de fundo */
 :root {
-    --primary-color: transparent;; /* Fundo semitransparente */
+    --primary-color: transparent; /* Fundo semitransparente */
     --secondary-color: transparent;
     --background-color: #94c7a6;
     --text-color: #e0dcdd;
@@ -72,6 +72,62 @@ body {
     background-attachment: fixed;
 }
 
+/* Estilos para a seção de presentes */
+.presentes-container {
+    background-color: var(--background-color); /* Cor de fundo da seção de presentes */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.presentes-container h1 {
+    font-size: 2em; /* Tamanho do título */
+    color: var(--text-light-color); /* Cor do texto */
+    margin: 20px 0; /* Margens do título */
+}
+
+.presentes-container p {
+    font-size: 1.2em; /* Tamanho do parágrafo */
+    color: var(--text-color); /* Cor do texto */
+    margin: 10px 0; /* Margens do parágrafo */
+}
+
+.presentes-grid {
+    display: flex; /* Flexbox para layout de grade */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.presente-item {
+    border: 1px solid #ddd; /* Bordas dos itens */
+    padding: 10px; /* Espaçamento interno */
+    width: 300px; /* Largura fixa para os itens */
+    text-align: center; /* Centraliza o texto */
+    background-color: #ffffff; /* Cor de fundo dos itens */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.presente-item img {
+    width: 100%; /* Largura da imagem */
+    height: auto; /* Altura automática para manter proporção */
+    border-radius: 5px; /* Bordas arredondadas nas imagens */
+}
+
+.presente-item button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor para ponteiro */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para cor de fundo */
+}
+
+.presente-item button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
 /* Media Queries para responsividade */
 
 /* Ajustes em tablets (largura máxima de 768px) */
@@ -97,6 +153,11 @@ body {
 
     .gallery-container {
         padding: 15px;
+    }
+
+    .presentes-grid {
+        flex-direction: column; /* Empilha os itens verticalmente em telas pequenas */
+        align-items: center; /* Centraliza os itens na coluna */
     }
 }
 
@@ -145,3 +206,33 @@ body {
         font-size: 0.9em;
     }
 }
+.presentes-container {
+    padding: 20px;
+  }
+  
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .presentes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
