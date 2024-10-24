@@ -3,7 +3,7 @@ import React from 'react';
 const Informacoes = () => (
 <div className="informacoes-container">
 <h1>Informações do Evento</h1>
-<p><strong>Data:</strong> 23 de Março de 2025</p>
+<p><strong>Data:</strong> 22 de Março de 2025</p>
 <p><strong>Horário:</strong> 17:00</p>
 <p><strong>Local:</strong> Espaço de Eventos Jardim Encantado</p>
 <p>Endereço: Rua das Flores, 123, Sorocaba, SP</p>
