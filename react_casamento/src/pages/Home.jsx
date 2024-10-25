@@ -13,7 +13,7 @@ const Home = () => (
   <div className="gallery-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
     <h1></h1>
     <h1></h1>
-    <h1>"Como nos grandes romances do cinema, março trará nosso final feliz. Prepare-se para viver esse momento inesquecível ao nosso lado."</h1>
+    <h1>"Como nos grandes romances do cinema, março trará nosso começo feliz. Prepare-se para viver esse momento inesquecível ao nosso lado."</h1>
 
     <ImageGallery items={images} />
   </div>
