@@ -1,0 +1,238 @@
+/* Estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Estilos de fundo */
+:root {
+    --primary-color: transparent; /* Fundo semitransparente */
+    --secondary-color: transparent;
+    --background-color: #94c7a6;
+    --text-color: #e0dcdd;
+    --text-light-color: #4d4e4e;
+}
+
+.gallery-container h1 {
+    font-size: 2em; /* Tamanho da fonte do título */
+    color: var(--text-light-color); /* Usando a cor definida na root */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margens acima e abaixo do título */
+}
+
+.gallery-container p {
+    font-size: 1.2em; /* Tamanho da fonte do parágrafo */
+    color: var(--text-color); /* Usando a cor definida na root */
+    text-align: center; /* Centraliza o texto */
+    margin: 10px 0; /* Margens acima e abaixo do parágrafo */
+}
+
+/* Ajustes para a navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: rgb(79, 172, 121);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+    color: #84c993;
+}
+
+/* Estilos para o fundo em telas maiores */
+body {
+    background-image: url('./assets/images/background.jpg');
+    background-size: cover; /* Mantém o cover para desktops */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilos para a seção de presentes */
+.presentes-container {
+    background-color: var(--background-color); /* Cor de fundo da seção de presentes */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.presentes-container h1 {
+    font-size: 2em; /* Tamanho do título */
+    color: var(--text-light-color); /* Cor do texto */
+    margin: 20px 0; /* Margens do título */
+}
+
+.presentes-container p {
+    font-size: 1.2em; /* Tamanho do parágrafo */
+    color: var(--text-color); /* Cor do texto */
+    margin: 10px 0; /* Margens do parágrafo */
+}
+
+.presentes-grid {
+    display: flex; /* Flexbox para layout de grade */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.presente-item {
+    border: 1px solid #ddd; /* Bordas dos itens */
+    padding: 10px; /* Espaçamento interno */
+    width: 300px; /* Largura fixa para os itens */
+    text-align: center; /* Centraliza o texto */
+    background-color: #ffffff; /* Cor de fundo dos itens */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.presente-item img {
+    width: 100%; /* Largura da imagem */
+    height: auto; /* Altura automática para manter proporção */
+    border-radius: 5px; /* Bordas arredondadas nas imagens */
+}
+
+.presente-item button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor para ponteiro */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para cor de fundo */
+}
+
+.presente-item button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+/* Media Queries para responsividade */
+
+/* Ajustes em tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    /* Ajuste para evitar cortes e preencher a largura da tela */
+    body {
+        background-size: cover; /* Mantém o cover para tablets */
+        background-position: center center; /* Centraliza */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
+    .gallery-container {
+        padding: 15px;
+    }
+
+    .presentes-grid {
+        flex-direction: column; /* Empilha os itens verticalmente em telas pequenas */
+        align-items: center; /* Centraliza os itens na coluna */
+    }
+}
+
+/* Ajustes em dispositivos móveis (largura máxima de 480px) */
+@media (max-width: 480px) {
+    /* Ajustes gerais */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    /* Ajustes para garantir que o fundo cubra toda a tela no mobile */
+    body {
+        background-image: url('./assets/images/background_mobile.jpg');
+        background-size: cover; /* Faz a imagem cobrir toda a área visível */
+        background-position: top center; /* Ajusta a posição para o topo centralizado */
+        background-repeat: no-repeat;
+        background-attachment: scroll; /* Remove o efeito de fixação */
+    }
+
+    /* Redução do espaçamento e margens */
+    .navbar {
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Menu em coluna no mobile */
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 8px 0;
+    }
+
+    .gallery-container {
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+.presentes-container {
+    padding: 20px;
+  }
+  
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .presentes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
