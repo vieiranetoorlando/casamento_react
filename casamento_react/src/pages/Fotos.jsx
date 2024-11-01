@@ -5,8 +5,8 @@ import foto1 from '../assets/images/foto1.jpg';
 import foto1Thumb from '../assets/images/foto1-thumb.jpg';
 import foto2 from '../assets/images/foto2.jpg';
 import foto2Thumb from '../assets/images/foto2-thumb.jpg';
-import foto3 from '../assets/images/foto3.jpg';
-import foto3Thumb from '../assets/images/foto3-thumb.jpg';
+//import foto3 from '../assets/images/foto3.jpg';
+//import foto3Thumb from '../assets/images/foto3-thumb.jpg';
 import foto4 from '../assets/images/foto4.jpg';
 import foto4Thumb from '../assets/images/foto4-thumb.jpg';
 import foto5 from '../assets/images/foto5.jpg';
@@ -29,8 +29,8 @@ import foto13 from '../assets/images/foto13.jpg';
 import foto13Thumb from '../assets/images/foto13-thumb.jpg';
 import foto14 from '../assets/images/foto14.jpg';
 import foto14Thumb from '../assets/images/foto14-thumb.jpg';
-import foto15 from '../assets/images/foto15.jpg';
-import foto15Thumb from '../assets/images/foto15-thumb.jpg';
+//import foto15 from '../assets/images/foto15.jpg';
+//import foto15Thumb from '../assets/images/foto15-thumb.jpg';
 import foto16 from '../assets/images/foto16.jpg';
 import foto16Thumb from '../assets/images/foto16-thumb.jpg';
 import foto17 from '../assets/images/foto17.jpg';
@@ -41,7 +41,7 @@ import foto18Thumb from '../assets/images/foto18-thumb.jpg';
 const images = [
   { original: foto1, thumbnail: foto1Thumb },
   { original: foto2, thumbnail: foto2Thumb },
-  { original: foto3, thumbnail: foto3Thumb },
+  //{ original: foto3, thumbnail: foto3Thumb },
   { original: foto4, thumbnail: foto4Thumb },
   { original: foto5, thumbnail: foto5Thumb },
   { original: foto6, thumbnail: foto6Thumb },
@@ -53,7 +53,7 @@ const images = [
   { original: foto12, thumbnail: foto12Thumb },
   { original: foto13, thumbnail: foto13Thumb },
   { original: foto14, thumbnail: foto14Thumb },
-  { original: foto15, thumbnail: foto15Thumb },
+  //{ original: foto15, thumbnail: foto15Thumb },
   { original: foto16, thumbnail: foto16Thumb },
   { original: foto17, thumbnail: foto17Thumb },
   { original: foto18, thumbnail: foto18Thumb },
