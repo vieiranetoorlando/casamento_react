@@ -44,13 +44,14 @@ function App() {
     return (
         <div style={backgroundStyle}>
             <animated.nav style={navAnimation} className="navbar">
-                <ul className="nav-list">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/fotos">Fotos</Link></li>
-                    <li><Link to="/presentes">Presentes</Link></li>
-                    <li><Link to="/confirmacao">Confirmação de Presença</Link></li>
-                    <li><Link to="/informacoes">Informações do Evento</Link></li>
-                </ul>
+            <ul className="nav-list">
+                <li><Link to="/" className="button">Home</Link></li>
+                <li><Link to="/fotos" className="button">Fotos</Link></li>
+                <li><Link to="/presentes" className="button">Lista de Presentes</Link></li>
+                <li><Link to="/confirmacao" className="button">Confirmação de Presença</Link></li>
+                <li><Link to="/informacoes" className="button">Informações do Evento</Link></li>
+            </ul>
+
             </animated.nav>
             <Routes>
                 <Route path="/" element={<Home />} />

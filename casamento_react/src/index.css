@@ -14,7 +14,7 @@ body, html {
     --secondary-color: transparent;
     --background-color: #94c7a6;
     --text-color: #e0dcdd;
-    --text-light-color: #4d4e4e;
+    --text-light-color: #768686;
 }
 
 .gallery-container h1 {
@@ -52,7 +52,7 @@ body, html {
 }
 
 .nav-list a {
-    color: rgb(79, 172, 121);
+    color: #4d4e4e;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, text-decoration 0.3s;
@@ -236,3 +236,30 @@ body {
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  /* Estilos para os botões */
+  .button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: rgba(70, 67, 67, 0.1); /* Cor de fundo do botão com 80% de opacidade */
+    color: rgb(231, 230, 145); /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para ponteiro */
+    font-size: 1.1em; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    margin: 10px; /* Margem ao redor do botão */
+}
+
+.button:hover {
+    background-color: #404140; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+/* Estilos para as seções */
+.section {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Margem em torno da seção */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 800px; /* Largura máxima da seção */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
