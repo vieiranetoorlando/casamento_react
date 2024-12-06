@@ -206,11 +206,12 @@ body {
         font-size: 0.9em;
     }
 }
+
 .presentes-container {
     padding: 20px;
-  }
-  
-  .modal {
+}
+
+.modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,25 +221,25 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     position: relative;
     width: 80%;
     max-width: 500px;
-  }
-  
-  .presentes-grid {
+}
+
+.presentes-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
+}
 
-  /* Estilos para os botões */
-  .button {
+/* Estilos para os botões */
+.button {
     padding: 10px 20px; /* Espaçamento interno */
     background-color: rgba(70, 67, 67, 0.1); /* Cor de fundo do botão com 80% de opacidade */
     color: rgb(231, 230, 145); /* Cor do texto do botão */
@@ -254,6 +255,7 @@ body {
     background-color: #404140; /* Cor de fundo ao passar o mouse */
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
+
 /* Estilos para as seções */
 .section {
     background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
@@ -263,3 +265,48 @@ body {
     max-width: 800px; /* Largura máxima da seção */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
+
+/* Estilos para a página de Confirmação de Presença */
+.confirmacao-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.confirmacao-container h1 {
+  font-size: 2.5em;
+  color: #2e2e2e;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.confirmacao-container p {
+  font-size: 1.2em;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.confirmacao-link {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.confirmacao-link:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+

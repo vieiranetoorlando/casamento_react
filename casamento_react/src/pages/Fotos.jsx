@@ -11,8 +11,8 @@ import foto4 from '../assets/images/foto4.jpg';
 import foto4Thumb from '../assets/images/foto4-thumb.jpg';
 import foto5 from '../assets/images/foto5.jpg';
 import foto5Thumb from '../assets/images/foto5-thumb.jpg';
-import foto6 from '../assets/images/foto6.jpg';
-import foto6Thumb from '../assets/images/foto6-thumb.jpg';
+//import foto6 from '../assets/images/foto6.jpg';
+//import foto6Thumb from '../assets/images/foto6-thumb.jpg';
 import foto7 from '../assets/images/foto7.jpg';
 import foto7Thumb from '../assets/images/foto7-thumb.jpg';
 import foto8 from '../assets/images/foto8.jpg';
@@ -44,7 +44,7 @@ const images = [
   //{ original: foto3, thumbnail: foto3Thumb },
   { original: foto4, thumbnail: foto4Thumb },
   { original: foto5, thumbnail: foto5Thumb },
-  { original: foto6, thumbnail: foto6Thumb },
+ // { original: foto6, thumbnail: foto6Thumb },
   { original: foto7, thumbnail: foto7Thumb },
   { original: foto8, thumbnail: foto8Thumb },
   { original: foto9, thumbnail: foto9Thumb },
@@ -54,7 +54,7 @@ const images = [
   { original: foto13, thumbnail: foto13Thumb },
   { original: foto14, thumbnail: foto14Thumb },
   //{ original: foto15, thumbnail: foto15Thumb },
-  { original: foto16, thumbnail: foto16Thumb },
+  //{ original: foto16, thumbnail: foto16Thumb },
   { original: foto17, thumbnail: foto17Thumb },
   { original: foto18, thumbnail: foto18Thumb },
 ];
